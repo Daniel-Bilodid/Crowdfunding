@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.header {
+  width: 100%;
+  height: 400px;
+  background-image: url("../../assets/image-hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: space-around;
+  &__logo {
+    margin-top: 48px;
+  }
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 32px;
+      margin-top: 45px;
+    }
+
+    &-item {
+      list-style: none;
+      font-family: $comm;
+      color: white;
+    }
+  }
+}
