@@ -2,7 +2,7 @@
 
 .hero {
   position: absolute;
-  top: 36%;
+  top: -5%;
   left: 50%;
   transform: translate(-50%, 20%);
 
@@ -15,7 +15,7 @@
     border-radius: 8px;
     &-logo {
       position: absolute;
-      top: 1%;
+      top: 0%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -70,7 +70,7 @@
       height: 56px;
       border-radius: 33.5px;
 
-      background: rgb(47, 47, 47);
+      background: rgb(244, 244, 244);
 
       color: rgb(122, 122, 122);
       font-family: $comm;

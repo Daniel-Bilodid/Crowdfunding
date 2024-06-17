@@ -9,7 +9,116 @@
 
   background: rgb(255, 255, 255);
   margin-top: 24px;
+  &__progress {
+    width: 634px;
+    height: 12px;
+    border-radius: 33.5px;
 
+    background: rgb(244, 244, 244);
+
+    margin-left: 48px;
+    margin-top: 37px;
+  }
+  &__fill {
+    width: 496px;
+    height: 12px;
+    border-radius: 33.5px;
+
+    background: rgb(60, 179, 171);
+  }
+  &__days {
+    &-hr {
+      background: rgb(0, 0, 0);
+      opacity: 0.15;
+      width: 1px;
+      height: 63px;
+      margin-top: 48px;
+      margin-left: 92px;
+    }
+    &-amount {
+      color: rgb(0, 0, 0);
+      font-family: $comm;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 39px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-left: 47px;
+      margin-top: 49px;
+    }
+    &-total {
+      color: rgb(122, 122, 122);
+      font-family: $comm;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-left: 47px;
+      margin-top: 8px;
+    }
+  }
+  &__backers {
+    &-amount {
+      color: rgb(0, 0, 0);
+      font-family: $comm;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 39px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-left: 47px;
+      margin-top: 49px;
+    }
+    &-total {
+      color: rgb(122, 122, 122);
+      font-family: $comm;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-left: 47px;
+      margin-top: 8px;
+    }
+  }
+  &__money {
+    &-hr {
+      margin-left: 43px;
+      background: rgb(0, 0, 0);
+      opacity: 0.15;
+      width: 1px;
+      height: 63px;
+      margin-top: 48px;
+    }
+    &-amount {
+      color: rgb(0, 0, 0);
+      font-family: $comm;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 39px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-top: 49px;
+      margin-left: 48px;
+    }
+    &-total {
+      margin-left: 48px;
+      margin-top: 8px;
+      color: rgb(122, 122, 122);
+      font-family: $comm;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+  }
+  &__hr {
+    height: 20px;
+    width: 1px;
+    background-color: aqua;
+  }
   &__wrapper {
     display: flex;
   }

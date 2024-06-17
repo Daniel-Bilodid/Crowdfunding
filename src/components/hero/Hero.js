@@ -2,6 +2,7 @@ import React from "react";
 import "./hero.scss";
 import logoHero from "../../assets/logo-mastercraft.svg";
 import Fees from "../fees/Fees";
+import About from "../about/About";
 export default function Hero() {
   return (
     <div className="hero">
@@ -26,6 +27,7 @@ export default function Hero() {
       </div>
 
       <Fees />
+      <About />
     </div>
   );
 }
