@@ -1,0 +1,122 @@
+@import "../../variables";
+
+.cards {
+  margin-top: 40px;
+}
+
+.card {
+  width: 634px;
+  height: 248px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+
+  background: rgb(255, 255, 255);
+  margin: 0 auto;
+  margin-top: 24px;
+
+  &__text {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-title {
+      color: rgb(0, 0, 0);
+      font-family: $comm;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-left: 32px;
+      margin-top: 38px;
+    }
+    &-pledge {
+      color: rgb(60, 179, 171);
+      font-family: $comm;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0px;
+      text-align: right;
+      margin-right: 32px;
+      margin-top: 40px;
+    }
+  }
+  &__descr {
+    width: 570px;
+    height: 60px;
+    color: rgb(122, 122, 122);
+    font-family: $comm;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 24px;
+  }
+  &__btn {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+    &-left {
+      margin-left: 32px;
+      color: rgb(0, 0, 0);
+      font-family: $comm;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 39px;
+      letter-spacing: 0px;
+      text-align: left;
+
+      span {
+        color: rgb(122, 122, 122);
+        font-family: $comm;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-top: -10px;
+      }
+    }
+
+    &-reward {
+      width: 157px;
+      height: 48px;
+      border-radius: 33.5px;
+      border: none;
+      background: rgb(60, 179, 171);
+
+      color: rgb(255, 255, 255);
+      font-family: $comm;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-right: 32px;
+      cursor: pointer;
+    }
+
+    &-reward:hover {
+      background: rgb(20, 122, 115);
+    }
+  }
+}
+
+.out-of {
+  opacity: 0.5;
+}
+
+.out__of-btn {
+  border-radius: 33.5px;
+
+  background: rgb(47, 47, 47);
+  opacity: 0.5;
+  cursor: no-drop;
+}

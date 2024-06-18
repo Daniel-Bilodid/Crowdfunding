@@ -13,6 +13,11 @@
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 8px;
+    &-activebg {
+      border-radius: 33.5px;
+
+      background: rgb(243, 248, 248) !important;
+    }
     &-logo {
       position: absolute;
       top: 0%;
@@ -63,6 +68,11 @@
       letter-spacing: 0px;
       text-align: center;
       margin-left: 48px;
+      cursor: pointer;
+    }
+
+    &-btn:hover {
+      background: rgb(20, 122, 115);
     }
 
     &-bookmark {
@@ -80,6 +90,54 @@
       letter-spacing: 0px;
       text-align: center;
       margin-right: 48px;
+      border: none;
+      cursor: pointer;
     }
   }
 }
+
+.bookmark-content {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-left: -5px;
+  }
+
+  span {
+    margin-left: 10px;
+  }
+
+  &-bookmark {
+    color: rgb(20, 122, 115);
+    font-family: $comm;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+}
+
+.hero__monitor-bookmark .bookmark-circle {
+  fill: #2f2f2f;
+}
+
+.hero__monitor-bookmark .bookmark-path {
+  fill: #b1b1b1;
+}
+
+.hero__monitor-bookmark.hero__monitor-activebg .bookmark-circle {
+  fill: rgb(20, 122, 115);
+}
+
+.hero__monitor-bookmark.hero__monitor-activebg .bookmark-path {
+  fill: rgb(255, 255, 255);
+}
+
+// .hero__monitor-bookmark .bookmark-circle:hover {
+//   fill: rgb(112, 112, 112);
+// }
+
+// .hero__monitor-bookmark .bookmark-path {
+//   fill: rgb(177, 177, 177);
+// }

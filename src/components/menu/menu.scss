@@ -1,0 +1,21 @@
+@import "../../variables";
+
+.menu {
+  position: fixed;
+  top: 10vh;
+  left: 5%;
+  height: 80vh;
+  margin: 0;
+  padding: 3rem 1.5rem;
+  overflow-y: scroll;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  z-index: 3;
+}
