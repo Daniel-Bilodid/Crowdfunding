@@ -1,21 +1,144 @@
 @import "../../variables";
 
 .menu {
+  width: 730px;
   position: fixed;
   top: 10vh;
   left: 5%;
   height: 80vh;
-  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 3rem 1.5rem;
-  overflow-y: scroll;
-  outline: none;
-  border: none;
-  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  transform: scale(0.95);
-  pointer-events: none;
+  visibility: hidden;
+  z-index: 3;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
   transition-property: opacity, transform;
   transition-duration: 0.5s;
   transition-timing-function: ease;
-  z-index: 3;
+  background: rgb(255, 255, 255);
+  &__descr {
+    width: 634px;
+    height: 30px;
+    color: rgb(122, 122, 122);
+    font-family: $comm;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 16px;
+    margin-left: 28px;
+  }
+  &__active {
+    visibility: visible;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &-close {
+      cursor: pointer;
+    }
+    &-title {
+      color: rgb(0, 0, 0);
+      font-family: $comm;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-left: 28px;
+    }
+  }
+}
+
+.menu__card {
+  width: 634px;
+  height: 157px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+
+  background: rgb(255, 255, 255);
+  margin-left: 28px;
+  margin-top: 32px;
+  &-descr {
+    width: 530px;
+    height: 56px;
+
+    color: rgb(122, 122, 122);
+    font-family: $comm;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-left: 76px;
+    margin-top: 17px;
+  }
+  &-left {
+    margin-left: 203px;
+    margin-top: 30px;
+    color: rgb(0, 0, 0);
+    font-family: $comm;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    span {
+      color: rgb(122, 122, 122);
+      font-family: $comm;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-left: 4px;
+    }
+  }
+
+  &-check {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid rgb(60, 179, 171);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 28px;
+    margin-top: 35px;
+  }
+
+  &-title {
+    margin-left: 24px;
+    margin-top: 32px;
+    color: rgb(60, 179, 171);
+    font-family: $comm;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  &-subtitle {
+    margin-left: 17px;
+    margin-top: 32px;
+    color: rgb(60, 179, 171);
+    font-family: $comm;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  &-wrapper {
+    display: flex;
+  }
 }

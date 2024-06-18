@@ -4,14 +4,12 @@ import logoHero from "../../assets/logo-mastercraft.svg";
 import Fees from "../fees/Fees";
 import About from "../about/About";
 
-export default function Hero() {
+export default function Hero({ openPopup }) {
   const [bookmark, setBookmark] = useState("Bookmark");
 
   let bookmarkActive = () => {
     setBookmark("Bookmarked");
   };
-
-  let toggleMenu = () => {};
 
   return (
     <div className="hero">
@@ -29,7 +27,7 @@ export default function Hero() {
         </div>
 
         <div className="hero__monitor-wrapper">
-          <button onClick={toggleMenu} className="hero__monitor-btn">
+          <button onClick={openPopup} className="hero__monitor-btn">
             Back this project
           </button>
 
