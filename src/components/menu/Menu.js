@@ -58,17 +58,34 @@ export default function Menu({ isPopupOpen, closePopup }) {
         <div className="menu__card">
           <div className="menu__card-wrapper">
             <input className="menu__card-check" type="checkbox" />
-            <div className="menu__card-title">Bamboo Stand</div>
-            <div className="menu__card-subtitle">Pledge $25 or more</div>
+            <div className="menu__card-title">Black Edition Stand</div>
+            <div className="menu__card-subtitle">Pledge $75 or more</div>
             <div className="menu__card-left">
-              101 <span>left</span>
+              64 <span>left</span>
             </div>
           </div>
 
           <div className="menu__card-descr">
-            You get an ergonomic stand made of natural bamboo. You've helped us
-            launch our promotional campaign, and you’ll be added to a special
-            Backer member list.
+            You get a Black Special Edition computer stand and a personal thank
+            you. You’ll be added to our Backer member list. Shipping is
+            included.
+          </div>
+        </div>
+
+        <div className="menu__card">
+          <div className="menu__card-wrapper">
+            <input className="menu__card-check" type="checkbox" />
+            <div className="menu__card-title">Mahogany Special Edition</div>
+            <div className="menu__card-subtitle">Pledge $200 or more</div>
+            <div className="menu__card-left">
+              0 <span>left</span>
+            </div>
+          </div>
+
+          <div className="menu__card-descr">
+            You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
+            personal thank you. You’ll be added to our Backer member list.
+            Shipping is included.
           </div>
         </div>
       </div>
