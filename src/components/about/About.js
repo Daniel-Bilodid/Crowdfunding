@@ -2,7 +2,7 @@ import React from "react";
 import "./about.scss";
 import Card from "../cards/Card";
 
-export default function About() {
+export default function About({ openPopup }) {
   return (
     <div className="about">
       <h1 className="about__title">About this project</h1>
@@ -20,7 +20,7 @@ export default function About() {
         to be stored under the stand.
       </div>
 
-      <Card />
+      <Card openPopup={openPopup} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./menu.scss";
 
 export default function Menu({ isPopupOpen, closePopup }) {
@@ -13,7 +13,6 @@ export default function Menu({ isPopupOpen, closePopup }) {
   const [blackEditionInput, setBlackEditionInput] = useState("");
   const [error, setError] = useState("");
   const onSubmit = () => {
-    console.log(bambooStandInput);
     if (checkedStates.noReward) {
       if (noRewardInput > 0) {
         setError("");
@@ -22,7 +21,6 @@ export default function Menu({ isPopupOpen, closePopup }) {
         closePopup();
         return;
       } else {
-        console.log("reward");
         setError(
           <>
             <div className="error__msg">Pledge should be higher than 0$</div>
@@ -60,6 +58,13 @@ export default function Menu({ isPopupOpen, closePopup }) {
       }
     }
   };
+  useEffect(() => {
+    setCheckedStates(false);
+    setError("");
+    setNoRewardInput("");
+    setBambooStandInput("");
+    setBlackEditionInput("");
+  }, [isPopupOpen]);
 
   const handleCheckboxChange = (item) => {
     setCheckedStates({
@@ -137,6 +142,7 @@ export default function Menu({ isPopupOpen, closePopup }) {
                 <div className="menu__card-btns">
                   <input
                     className="menu__card-input"
+                    value={noRewardInput}
                     onChange={(event) => setNoRewardInput(event.target.value)}
                     placeholder="0.00"
                   />
@@ -180,29 +186,33 @@ export default function Menu({ isPopupOpen, closePopup }) {
               special Backer member list.
             </div>
 
-            {checkedStates.bambooStand && (
-              <div className="menu__card-footer footer__active">
-                <div className="menu__card-hr"></div>
-                <div className="card__text-wrapper">
-                  <div className="menu__card-enter">Enter your pledge</div>
-                  <div className="menu__card-btns">
-                    <input
-                      className="menu__card-input"
-                      value={bambooStandInput}
-                      onChange={(event) =>
-                        setBambooStandInput(event.target.value)
-                      }
-                      placeholder="0.00"
-                    />
-                    <button className="menu__card-button" onClick={onSubmit}>
-                      Continue
-                    </button>
-                  </div>
+            <div
+              className={
+                checkedStates.bambooStand
+                  ? "menu__card-footer footer__active"
+                  : " menu__card-footer "
+              }
+            >
+              <div className="menu__card-hr"></div>
+              <div className="card__text-wrapper">
+                <div className="menu__card-enter">Enter your pledge</div>
+                <div className="menu__card-btns">
+                  <input
+                    className="menu__card-input"
+                    value={bambooStandInput}
+                    onChange={(event) =>
+                      setBambooStandInput(event.target.value)
+                    }
+                    placeholder="0.00"
+                  />
+                  <button className="menu__card-button" onClick={onSubmit}>
+                    Continue
+                  </button>
                 </div>
-
-                {error}
               </div>
-            )}
+
+              {error}
+            </div>
           </div>
 
           <div className="menu__card">
@@ -236,28 +246,32 @@ export default function Menu({ isPopupOpen, closePopup }) {
               included.
             </div>
 
-            {checkedStates.blackEdition && (
-              <div className="menu__card-footer footer__active">
-                <div className="menu__card-hr"></div>
-                <div className="card__text-wrapper">
-                  <div className="menu__card-enter">Enter your pledge</div>
-                  <div className="menu__card-btns">
-                    <input
-                      className="menu__card-input"
-                      placeholder="0.00"
-                      value={blackEditionInput}
-                      onChange={(event) =>
-                        setBlackEditionInput(event.target.value)
-                      }
-                    />
-                    <button className="menu__card-button" onClick={onSubmit}>
-                      Continue
-                    </button>
-                  </div>
+            <div
+              className={
+                checkedStates.blackEdition
+                  ? "menu__card-footer footer__active"
+                  : " menu__card-footer "
+              }
+            >
+              <div className="menu__card-hr"></div>
+              <div className="card__text-wrapper">
+                <div className="menu__card-enter">Enter your pledge</div>
+                <div className="menu__card-btns">
+                  <input
+                    className="menu__card-input"
+                    placeholder="0.00"
+                    value={blackEditionInput}
+                    onChange={(event) =>
+                      setBlackEditionInput(event.target.value)
+                    }
+                  />
+                  <button className="menu__card-button" onClick={onSubmit}>
+                    Continue
+                  </button>
                 </div>
-                {error}
               </div>
-            )}
+              {error}
+            </div>
           </div>
 
           <div className="menu__card out-of">

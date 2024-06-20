@@ -62,7 +62,7 @@ export default function Hero({ openPopup }) {
       </div>
 
       <Fees />
-      <About />
+      <About openPopup={openPopup} />
     </div>
   );
 }

@@ -3,24 +3,18 @@
 .menu {
   width: 730px;
   position: fixed;
-  top: 10vh;
-  left: 5%;
-  height: 80vh;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
+  height: 80vh;
   padding: 3rem 1.5rem;
-
   overflow-y: scroll;
-
-  visibility: hidden;
+  margin: 0;
   z-index: 3;
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 8px;
-  transition-property: opacity, transform;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+  transition: transform 0.5s ease;
   background: rgb(255, 255, 255);
   &__descr {
     width: 634px;
@@ -36,7 +30,7 @@
     margin-left: 28px;
   }
   &__active {
-    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   &__content {
@@ -295,14 +289,13 @@
 .menu__card-footer {
   max-height: 0;
   opacity: 0;
-  overflow: hidden; /* Для предотвращения прокрутки содержимого */
+  overflow: hidden;
   transition-property: max-height, opacity;
   transition-duration: 0.7s;
   transition-timing-function: ease;
 }
 
-/* Стили для открытого состояния */
 .menu__card-footer.footer__active {
-  max-height: 200px; /* Укажите достаточно большое значение для max-height */
+  max-height: 200px;
   opacity: 1;
 }

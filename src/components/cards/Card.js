@@ -1,7 +1,7 @@
 import React from "react";
 import "./cards.scss";
 
-export default function Card() {
+export default function Card({ openPopup }) {
   return (
     <div className="cards">
       <div className="card">
@@ -21,7 +21,9 @@ export default function Card() {
             101 <span>left</span>
           </div>
 
-          <button className="card__btn-reward">Select Reward</button>
+          <button className="card__btn-reward" onClick={openPopup}>
+            Select Reward
+          </button>
         </div>
       </div>
 
@@ -41,7 +43,9 @@ export default function Card() {
             64 <span>left</span>
           </div>
 
-          <button className="card__btn-reward">Select Reward</button>
+          <button className="card__btn-reward" onClick={openPopup}>
+            Select Reward
+          </button>
         </div>
       </div>
 
