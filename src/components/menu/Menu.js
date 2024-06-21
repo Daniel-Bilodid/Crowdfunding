@@ -11,7 +11,13 @@ export default function Menu({ isPopupOpen, closePopup }) {
   const [noRewardInput, setNoRewardInput] = useState("");
   const [bambooStandInput, setBambooStandInput] = useState("");
   const [blackEditionInput, setBlackEditionInput] = useState("");
+  const [isThxOpen, setIsThxOpen] = useState(false);
   const [error, setError] = useState("");
+
+  const onThxClose = () => {
+    setIsThxOpen(false);
+  };
+
   const onSubmit = () => {
     if (checkedStates.noReward) {
       if (noRewardInput > 0) {
@@ -19,6 +25,7 @@ export default function Menu({ isPopupOpen, closePopup }) {
         setNoRewardInput("");
         setCheckedStates(false);
         closePopup();
+        setIsThxOpen(true);
         return;
       } else {
         setError(
@@ -34,6 +41,7 @@ export default function Menu({ isPopupOpen, closePopup }) {
         setError("");
         setBambooStandInput("");
         setCheckedStates(false);
+        setIsThxOpen(true);
       } else {
         setError(
           <>
@@ -49,6 +57,7 @@ export default function Menu({ isPopupOpen, closePopup }) {
         setError("");
         setBlackEditionInput("");
         setCheckedStates(false);
+        setIsThxOpen(true);
       } else {
         setError(
           <>
@@ -79,9 +88,36 @@ export default function Menu({ isPopupOpen, closePopup }) {
   return (
     <div
       className={`menu-container ${
-        isPopupOpen ? "menu-container--active" : ""
+        isPopupOpen || isThxOpen ? "menu-container--active" : ""
       }`}
     >
+      {isThxOpen && <div className="menu-overlay"></div>}
+      <div className={isThxOpen ? `menu__thx menu__thx-active` : "menu__thx"}>
+        <div className="menu__thx-svg">
+          <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#3CB3AB" cx="32" cy="32" r="32" />
+              <path
+                stroke="#FFF"
+                stroke-width="5"
+                d="M20 31.86L28.093 40 44 24"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div className="menu__thx-title">Thanks for your support!</div>
+        <div className="menu__thx-descr">
+          Your pledge brings us one step closer to sharing Mastercraft Bamboo
+          Monitor Riser worldwide. You will get an email once our campaign is
+          completed.
+        </div>
+        <div className="menu__thx-btns">
+          <button className="menu__thx-btn" onClick={onThxClose}>
+            Got it!
+          </button>
+        </div>
+      </div>
       {isPopupOpen && <div className="menu-overlay" onClick={closePopup}></div>}
       <div className={`menu ${isPopupOpen ? "menu__active" : "menu"}`}>
         <div className="menu__content">

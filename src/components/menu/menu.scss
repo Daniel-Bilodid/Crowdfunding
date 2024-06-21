@@ -16,6 +16,72 @@
   border-radius: 8px;
   transition: transform 0.5s ease;
   background: rgb(255, 255, 255);
+
+  &__thx {
+    width: 540px;
+    height: 449px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.8s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 1001;
+    &-active {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    &-svg {
+      display: flex;
+      justify-content: center;
+      margin-top: 48px;
+    }
+
+    &-title {
+      color: rgb(0, 0, 0);
+      font-family: $comm;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-top: 47.5px;
+    }
+    &-descr {
+      width: 444px;
+      height: 90px;
+      color: rgb(122, 122, 122);
+      font-family: $comm;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 16px;
+    }
+    &-btn {
+      width: 107px;
+      height: 48px;
+      border-radius: 33.5px;
+
+      background: rgb(60, 179, 171);
+      border: none;
+      color: rgb(255, 255, 255);
+      font-family: $comm;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17px;
+      letter-spacing: 0px;
+      text-align: center;
+      cursor: pointer;
+    }
+    &-btns {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+    }
+  }
   &__descr {
     width: 634px;
     height: 30px;
@@ -254,7 +320,7 @@
 
 .menu-container {
   position: relative;
-  z-index: 1; /* ensure it is above the overlay */
+  z-index: 1;
 }
 
 .menu-container--active .menu-overlay {

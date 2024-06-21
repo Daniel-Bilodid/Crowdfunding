@@ -3,13 +3,13 @@
 .hero {
   position: absolute;
   top: -5%;
-  left: 50%;
+  left: 50.3%;
   transform: translate(-50%, 20%);
 
   &__monitor {
     margin: 0 auto;
-    width: 730px;
-    height: 269px;
+    width: 728px;
+    height: 266px;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 8px;
@@ -26,7 +26,8 @@
     }
 
     &-title {
-      padding-top: 56px;
+      margin-right: 1px;
+      padding-top: 55px;
       color: rgb(0, 0, 0);
       font-family: $comm;
       font-size: 28px;
@@ -67,7 +68,7 @@
       line-height: 20px;
       letter-spacing: 0px;
       text-align: center;
-      margin-left: 48px;
+      margin-left: 46px;
       cursor: pointer;
     }
 
@@ -100,11 +101,13 @@
   display: flex;
   align-items: center;
   svg {
-    margin-left: -5px;
+    margin-left: -6px;
+    margin-bottom: -1px;
   }
 
   span {
-    margin-left: 10px;
+    margin-bottom: 2px;
+    margin-left: 16px;
   }
 
   &-bookmark {
