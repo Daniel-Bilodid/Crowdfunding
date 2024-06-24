@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./menu.scss";
 
-export default function Menu({ isPopupOpen, closePopup }) {
+export default function Menu({
+  isPopupOpen,
+  closePopup,
+  backed,
+  backers,
+  setBacked,
+  setBackers,
+}) {
   const [checkedStates, setCheckedStates] = useState({
     noReward: false,
     bambooStand: false,
@@ -22,6 +29,8 @@ export default function Menu({ isPopupOpen, closePopup }) {
     if (checkedStates.noReward) {
       if (noRewardInput > 0) {
         setError("");
+        setBacked(backed + Number(noRewardInput));
+        setBackers(backers + 1);
         setNoRewardInput("");
         setCheckedStates(false);
         closePopup();
@@ -39,6 +48,8 @@ export default function Menu({ isPopupOpen, closePopup }) {
       if (bambooStandInput >= 25) {
         closePopup();
         setError("");
+        setBacked(backed + Number(bambooStandInput));
+        setBackers(backers + 1);
         setBambooStandInput("");
         setCheckedStates(false);
         setIsThxOpen(true);
@@ -55,6 +66,8 @@ export default function Menu({ isPopupOpen, closePopup }) {
       if (blackEditionInput >= 75) {
         closePopup();
         setError("");
+        setBacked(backed + Number(blackEditionInput));
+        setBackers(backers + 1);
         setBlackEditionInput("");
         setCheckedStates(false);
         setIsThxOpen(true);
@@ -193,7 +206,7 @@ export default function Menu({ isPopupOpen, closePopup }) {
 
           <div className="menu__card">
             <div className="menu__card-wrapper">
-              <div className="card__text-wrapper">
+              <div className="card__text-wrapper card__wrapper-mobile">
                 <input
                   className="menu__card-check"
                   type="checkbox"
@@ -203,13 +216,28 @@ export default function Menu({ isPopupOpen, closePopup }) {
                 <div
                   className={
                     checkedStates.bambooStand
-                      ? `menu__card-title menu__card-active`
-                      : "menu__card-title"
+                      ? `menu__card-title menu__card-active mobile`
+                      : "menu__card-title mobile"
                   }
                 >
                   Bamboo Stand
                 </div>
-                <div className="menu__card-subtitle">Pledge $25 or more</div>
+                <div className="menu__card-subtitle mobile">
+                  Pledge $25 or more
+                </div>
+
+                <div className="menu__card-mobile">
+                  <div
+                    className={
+                      checkedStates.bambooStand
+                        ? `menu__card-title menu__card-active`
+                        : "menu__card-title"
+                    }
+                  >
+                    Bamboo Stand
+                  </div>
+                  <div className="menu__card-subtitle">Pledge $25 or more</div>
+                </div>
               </div>
               <div className="menu__card-left">
                 101 <span>left</span>
@@ -222,6 +250,10 @@ export default function Menu({ isPopupOpen, closePopup }) {
               special Backer member list.
             </div>
 
+            <div className="menu__card-leftmob ">
+              101 <span>left</span>
+            </div>
+
             <div
               className={
                 checkedStates.bambooStand
@@ -230,7 +262,7 @@ export default function Menu({ isPopupOpen, closePopup }) {
               }
             >
               <div className="menu__card-hr"></div>
-              <div className="card__text-wrapper">
+              <div className="card__text-wrapper ">
                 <div className="menu__card-enter">Enter your pledge</div>
                 <div className="menu__card-btns">
                   <input
@@ -253,7 +285,7 @@ export default function Menu({ isPopupOpen, closePopup }) {
 
           <div className="menu__card">
             <div className="menu__card-wrapper">
-              <div className="card__text-wrapper">
+              <div className="card__text-wrapper card__wrapper-mobile">
                 <input
                   className="menu__card-check"
                   type="checkbox"
@@ -263,13 +295,28 @@ export default function Menu({ isPopupOpen, closePopup }) {
                 <div
                   className={
                     checkedStates.blackEdition
-                      ? `menu__card-title menu__card-active`
-                      : "menu__card-title"
+                      ? `menu__card-title menu__card-active mobile`
+                      : "menu__card-title mobile"
                   }
                 >
                   Black Edition Stand
                 </div>
-                <div className="menu__card-subtitle">Pledge $75 or more</div>
+                <div className="menu__card-subtitle mobile">
+                  Pledge $75 or more
+                </div>
+
+                <div className="menu__card-mobile">
+                  <div
+                    className={
+                      checkedStates.blackEdition
+                        ? `menu__card-title menu__card-active`
+                        : "menu__card-title"
+                    }
+                  >
+                    Black Edition Stand
+                  </div>
+                  <div className="menu__card-subtitle">Pledge $75 or more</div>
+                </div>
               </div>
               <div className="menu__card-left">
                 64 <span>left</span>
@@ -281,7 +328,9 @@ export default function Menu({ isPopupOpen, closePopup }) {
               thank you. You’ll be added to our Backer member list. Shipping is
               included.
             </div>
-
+            <div className="menu__card-leftmob">
+              64 <span>left</span>
+            </div>
             <div
               className={
                 checkedStates.blackEdition
@@ -312,10 +361,21 @@ export default function Menu({ isPopupOpen, closePopup }) {
 
           <div className="menu__card out-of">
             <div className="menu__card-wrapper">
-              <div className="card__text-wrapper">
+              <div className="card__text-wrapper card__wrapper-mobile">
                 <input className="menu__card-check" type="checkbox" />
-                <div className="menu__card-title">Mahogany Special Edition</div>
-                <div className="menu__card-subtitle">Pledge $200 or more</div>
+                <div className="menu__card-title mobile">
+                  Mahogany Special Edition
+                </div>
+                <div className="menu__card-subtitle mobile">
+                  Pledge $200 or more
+                </div>
+
+                <div className="menu__card-mobile">
+                  <div className="menu__card-title">
+                    Mahogany Special Edition
+                  </div>
+                  <div className="menu__card-subtitle">Pledge $200 or more</div>
+                </div>
               </div>
               <div className="menu__card-left">
                 0 <span>left</span>

@@ -4,11 +4,19 @@ import logoHero from "../../assets/logo-mastercraft.svg";
 import Fees from "../fees/Fees";
 import About from "../about/About";
 
-export default function Hero({ openPopup }) {
+export default function Hero({
+  openPopup,
+  backed,
+  backers,
+  setBacked,
+  setBackers,
+}) {
   const [bookmark, setBookmark] = useState("Bookmark");
 
   let bookmarkActive = () => {
-    setBookmark("Bookmarked");
+    setBookmark((prevBookmark) =>
+      prevBookmark === "Bookmark" ? "Bookmarked" : "Bookmark"
+    );
   };
 
   return (
@@ -30,6 +38,17 @@ export default function Hero({ openPopup }) {
           <button onClick={openPopup} className="hero__monitor-btn">
             Back this project
           </button>
+          <svg
+            className="hero__monitor-svg"
+            width="56"
+            height="56"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+              <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+            </g>
+          </svg>
 
           <button
             className={
@@ -61,7 +80,7 @@ export default function Hero({ openPopup }) {
         </div>
       </div>
 
-      <Fees />
+      <Fees backed={backed} backers={backers} />
       <About openPopup={openPopup} />
     </div>
   );

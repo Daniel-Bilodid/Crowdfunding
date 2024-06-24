@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
 import Header from "./components/header/Header";
@@ -7,7 +6,8 @@ import Menu from "./components/menu/Menu";
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  const [backed, setBacked] = useState(89914);
+  const [backers, setBackers] = useState(5007);
   const openPopup = () => {
     setIsPopupOpen(true);
   };
@@ -17,11 +17,18 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <main className="App">
       <Header />
-      <Hero openPopup={openPopup} />
-      <Menu isPopupOpen={isPopupOpen} closePopup={closePopup} />
-    </div>
+      <Hero backed={backed} backers={backers} openPopup={openPopup} />
+      <Menu
+        backed={backed}
+        backers={backers}
+        setBacked={setBacked}
+        setBackers={setBackers}
+        isPopupOpen={isPopupOpen}
+        closePopup={closePopup}
+      />
+    </main>
   );
 }
 

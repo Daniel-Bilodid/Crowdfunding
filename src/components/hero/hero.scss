@@ -15,7 +15,8 @@
     border-radius: 8px;
     &-activebg {
       border-radius: 33.5px;
-
+      width: 190px !important;
+      transition: width 0.8s ease;
       background: rgb(243, 248, 248) !important;
     }
     &-logo {
@@ -24,7 +25,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
+    &-svg {
+      display: none;
+    }
     &-title {
       margin-right: 1px;
       padding-top: 55px;
@@ -80,7 +83,7 @@
       width: 174px;
       height: 56px;
       border-radius: 33.5px;
-
+      transition: width 0.8s ease;
       background: rgb(244, 244, 244);
 
       color: rgb(122, 122, 122);
@@ -100,6 +103,7 @@
 .bookmark-content {
   display: flex;
   align-items: center;
+
   svg {
     margin-left: -6px;
     margin-bottom: -1px;
@@ -144,3 +148,43 @@
 // .hero__monitor-bookmark .bookmark-path {
 //   fill: rgb(177, 177, 177);
 // }
+
+@media (max-width: 740px) {
+  .hero {
+    width: 100%;
+    &__monitor {
+      width: 90%;
+      &-wrapper {
+        justify-content: center;
+        gap: 9px;
+      }
+      &-btn {
+        margin-left: 0px;
+      }
+      &-title {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+      }
+      &-descr {
+        width: 280px;
+        height: 48px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 16px;
+      }
+      &-svg {
+        display: block;
+      }
+      &-bookmark {
+        display: none;
+      }
+    }
+  }
+}

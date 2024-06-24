@@ -18,7 +18,7 @@
     line-height: 24px;
     letter-spacing: 0px;
     text-align: left;
-    margin-left: 48px;
+    margin-left: 46px;
     margin-top: 48px;
   }
 
@@ -47,5 +47,48 @@
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0px;
+  }
+}
+
+@media (max-width: 740px) {
+  .about {
+    width: 100%;
+
+    &__title {
+      width: 150px;
+      height: 22px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin: 0 auto;
+
+      margin-top: 40px;
+    }
+
+    &__text {
+      width: 279px;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin: 0 auto;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    &__subtext {
+      width: 279px;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin: 0 auto;
+    }
   }
 }

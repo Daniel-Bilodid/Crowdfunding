@@ -18,7 +18,7 @@ export default function Card({ openPopup }) {
 
         <div className="card__btn-wrapper">
           <div className="card__btn-left">
-            101 <span>left</span>
+            <div className="card__btn-title">101</div> <span>left</span>
           </div>
 
           <button className="card__btn-reward" onClick={openPopup}>
@@ -40,7 +40,7 @@ export default function Card({ openPopup }) {
 
         <div className="card__btn-wrapper">
           <div className="card__btn-left">
-            64 <span>left</span>
+            <div className="card__btn-title">64</div> <span>left</span>
           </div>
 
           <button className="card__btn-reward" onClick={openPopup}>
@@ -63,7 +63,7 @@ export default function Card({ openPopup }) {
 
         <div className="card__btn-wrapper">
           <div className="card__btn-left">
-            0 <span>left</span>
+            <div className="card__btn-title">0</div> <span>left</span>
           </div>
 
           <button className="card__btn-reward out__of-btn">Out of stock</button>

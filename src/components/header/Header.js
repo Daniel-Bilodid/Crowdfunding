@@ -6,7 +6,6 @@ export default function Header() {
 
   const toggleBurger = () => {
     setBurgerMenu((prevState) => !prevState);
-    console.log(burgerMenu);
   };
 
   return (
