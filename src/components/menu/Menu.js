@@ -160,6 +160,7 @@ export default function Menu({
                 type="checkbox"
                 checked={checkedStates.noReward}
                 onChange={() => handleCheckboxChange("noReward")}
+                aria-label="Pledge with no reward"
               />
               <div
                 className={
@@ -212,6 +213,7 @@ export default function Menu({
                   type="checkbox"
                   checked={checkedStates.bambooStand}
                   onChange={() => handleCheckboxChange("bambooStand")}
+                  aria-label="Pledge with bamboo stand"
                 />
                 <div
                   className={
@@ -291,6 +293,7 @@ export default function Menu({
                   type="checkbox"
                   checked={checkedStates.blackEdition}
                   onChange={() => handleCheckboxChange("blackEdition")}
+                  aria-label="Pledge with black edition"
                 />
                 <div
                   className={
@@ -362,7 +365,11 @@ export default function Menu({
           <div className="menu__card out-of">
             <div className="menu__card-wrapper">
               <div className="card__text-wrapper card__wrapper-mobile">
-                <input className="menu__card-check" type="checkbox" />
+                <input
+                  className="menu__card-check"
+                  type="checkbox"
+                  aria-label="Pledge out of stock"
+                />
                 <div className="menu__card-title mobile">
                   Mahogany Special Edition
                 </div>
