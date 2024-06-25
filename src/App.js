@@ -18,7 +18,7 @@ function App() {
 
   return (
     <main className="App">
-      <Header />
+      <Header isPopupOpen={isPopupOpen} />
       <Hero backed={backed} backers={backers} openPopup={openPopup} />
       <Menu
         backed={backed}

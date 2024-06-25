@@ -29,6 +29,7 @@
       display: none;
     }
     &-title {
+      margin: 0;
       margin-right: 1px;
       padding-top: 55px;
       color: rgb(0, 0, 0);
@@ -140,6 +141,9 @@
 .hero__monitor-bookmark.hero__monitor-activebg .bookmark-path {
   fill: rgb(255, 255, 255);
 }
+.dif {
+  display: none;
+}
 
 // .hero__monitor-bookmark .bookmark-circle:hover {
 //   fill: rgb(112, 112, 112);
@@ -157,6 +161,11 @@
       &-wrapper {
         justify-content: center;
         gap: 9px;
+      }
+      &-activebg {
+        width: 70px !important;
+        background: none !important;
+        transition: none;
       }
       &-btn {
         margin-left: 0px;
@@ -184,6 +193,25 @@
       }
       &-bookmark {
         display: none;
+      }
+    }
+  }
+
+  .dif {
+    width: 70px;
+    display: block;
+    background: none !important;
+    transition: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero {
+    &__monitor {
+      &-wrapper {
+        width: 100%;
+
+        margin-left: 25px;
       }
     }
   }

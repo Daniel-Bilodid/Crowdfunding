@@ -17,13 +17,15 @@
   background-image: url("../../assets/image-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
+  z-index: 1001;
   display: flex;
   justify-content: space-between;
   &__logo {
     margin-top: 48px;
     margin-left: 166px;
-    z-index: 1;
+    z-index: 1001;
+    opacity: 1;
+    transition: opacity 0.8s ease;
   }
   &__nav {
     &-list {
@@ -31,6 +33,9 @@
       gap: 33px;
       margin-top: 50px;
       margin-right: 159px;
+      z-index: 1001;
+      opacity: 1;
+      transition: opacity 0.8s ease;
     }
 
     &-item {
@@ -42,6 +47,13 @@
       letter-spacing: 0px;
       text-align: left;
       list-style: none;
+      cursor: pointer;
+      height: 20px;
+    }
+
+    &-item:hover {
+      color: rgb(20, 122, 115);
+      opacity: 1;
     }
   }
 }
@@ -141,6 +153,13 @@
       margin-left: 24px;
     }
 
+    &__btn {
+      &-burger {
+        position: relative;
+        z-index: 1001;
+      }
+    }
+
     &__nav {
       &-list {
         display: none;
@@ -192,4 +211,29 @@
       }
     }
   }
+}
+
+.active__header {
+  opacity: 0;
+}
+
+.header-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.header__overlay-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }

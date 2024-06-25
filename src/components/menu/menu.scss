@@ -521,3 +521,21 @@
     }
   }
 }
+
+@media (max-width: 340px) {
+  .menu {
+    &__descr {
+      width: 200px;
+    }
+    &__card {
+      margin-left: 15px;
+      &-descr {
+        width: 195px;
+      }
+
+      &-button {
+        margin-left: 0px;
+      }
+    }
+  }
+}

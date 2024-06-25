@@ -26,9 +26,9 @@ export default function Hero({
       </div>
 
       <div className="hero__monitor">
-        <div className="hero__monitor-title">
+        <h1 className="hero__monitor-title">
           Mastercraft Bamboo Monitor Riser
-        </div>
+        </h1>
 
         <div className="hero__monitor-descr">
           A beautiful & handcrafted monitor stand to reduce neck and eye strain.
@@ -38,17 +38,25 @@ export default function Hero({
           <button onClick={openPopup} className="hero__monitor-btn">
             Back this project
           </button>
-          <svg
-            className="hero__monitor-svg"
-            width="56"
-            height="56"
-            xmlns="http://www.w3.org/2000/svg"
+
+          <button
+            className={
+              bookmark === "Bookmarked"
+                ? `hero__monitor-bookmark hero__monitor-activebg dif`
+                : `hero__monitor-bookmark dif`
+            }
+            onClick={bookmarkActive}
           >
-            <g fill="none" fill-rule="evenodd">
-              <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
-              <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
-            </g>
-          </svg>
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fillRule="evenodd">
+                <circle className="bookmark-circle" cx="28" cy="28" r="28" />
+                <path
+                  className="bookmark-path"
+                  d="M23 19v18l5-5.058L33 37V19z"
+                />
+              </g>
+            </svg>
+          </button>
 
           <button
             className={
